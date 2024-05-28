@@ -1,0 +1,47 @@
+#version: '3.8'
+
+services:
+  mysql:
+    image: mysql:latest
+    restart: always
+    environment:
+#      MYSQL_DATABASE: "demo"
+      MYSQL_ROOT_PASSWORD: "0125"
+    ports:
+     - "3306:3306"
+    volumes:
+       - ./backend/dao/mysql/initsql:/docker-entrypoint-initdb.d
+       - mysql_data:/var/lib/mysql
+    networks:
+       - mynetwork
+
+  react-app:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:80"
+    depends_on:
+      - go-app
+    networks:
+      - mynetwork
+
+
+  go-app:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mysql
+    networks:
+      - mynetwork
+    entrypoint: ["/app/wait-for.sh", "mysql:3306", "--", "/app/main"]
+
+volumes:
+  mysql_data:
+
+networks:
+  mynetwork:
+
