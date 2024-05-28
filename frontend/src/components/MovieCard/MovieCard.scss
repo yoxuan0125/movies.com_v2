@@ -1,0 +1,25 @@
+.moviecard {
+  text-decoration: none;
+  color: black;
+  border: 0.5px solid transparent;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2),
+    -1px -1px 2px 1px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  flex-wrap: wrap;
+}
+
+.movieimg {
+  height: 240px;
+  width: 100%;
+  margin: 0 0 8px 0;
+  border-radius: 10px 10px 0 0;
+  top: 0;
+}
+.moviecontent {
+  text-align: center;
+  flex-wrap: wrap;
+}
