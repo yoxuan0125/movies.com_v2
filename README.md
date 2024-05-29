@@ -41,3 +41,7 @@
 - frontend: Contains the React application and assets.
 - docker-compose.yml: Configuration file for Docker Compose.
 
+## Contact
+- Author: 林佑宸
+- Email: a0920712872@gmail.com
+
