@@ -11,10 +11,10 @@
 - **Personal Movie Lists**: Users can add movies to their personal watchlist.
 
 ## Technologies Used
-- **Backend**: Go
-- **Frontend**: JavaScript, SCSS, CSS, HTML
+- **Backend**: Go, MySQL, JWT
+- **Frontend**: React, JavaScript, SCSS, CSS, HTML
 - **Containerization**: Docker
-- **Other**: Nginx, MySQL
+- **Other**: Nginx
 
 ## DB Schema
 ![Dbdiagram.png](./readme/Dbdiagram.png)
