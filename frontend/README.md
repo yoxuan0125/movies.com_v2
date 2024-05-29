@@ -1,4 +1,4 @@
-# 進行中-->MOVIES.com
+# MOVIES.com
 Check the Website [Demo](https://eager-darwin-c6e6dd.netlify.app/)
 
 + React
